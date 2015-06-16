@@ -13,3 +13,11 @@ at coffeescript gets weird, and I want to be able to make changes, because this 
 might extend that with time.
 
 Jazmit did the hard work.  I just want to make this easier to use in an NPM environment.
+
+
+
+
+
+# Polemic :neckbeard:
+
+`jasCheck` is MIT licensed, because viral licenses and newspeak language modification are evil.  Free is ***only*** free when it's free for everyone.
