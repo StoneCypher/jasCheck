@@ -1,6 +1,8 @@
 
-var forAll,
-    slice = [].slice;
+var JSC   = require('jscheck');
+
+var slice = [].slice,
+    forAll;
 
 
 
@@ -28,8 +30,8 @@ forAll = function(signature, name, predicate) {
     jscPredicate = (function(_this) {
 
       return function() {
-        var value, verify;
-        verify = arguments[0], value = 2 <= arguments.length ? slice.call(arguments, 1) : [];
+        var value  = value = 2 <= arguments.length ? slice.call(arguments, 1) : [],
+            verify = arguments[0];
         predicate.apply(null, value);
         return verify(_this.results().failedCount === 0);
       };
@@ -41,17 +43,24 @@ forAll = function(signature, name, predicate) {
     if (this.reps) { JSC.reps(this.reps); }
 
     failure = function(f) {
+
       var theReport;
+
       theReport = 'Failed: ' + f.name;
+
       if (!failedBefore) {
+
         console.log('First failure with arguments:');
         console.log(f.args);
-        if (f.exception != null) {
-          console.log('Exception: ' + f.exception);
-        }
+
+        if (f.exception != null) { console.log('Exception: ' + f.exception); }
+
         localJasmine.fail(theReport);
+
       }
+
       return failedBefore = true;
+
     };
 
     JSC.on_fail(failure);
@@ -60,5 +69,16 @@ forAll = function(signature, name, predicate) {
     return JSC.check(5000);
 
   });
+
+};
+
+
+
+
+
+module.exports = {
+
+  make_for_all : MakeForAll,
+  for_all      : forAll
 
 };
