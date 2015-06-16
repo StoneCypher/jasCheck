@@ -1,7 +1,8 @@
 
-var JSC   = require('jscheck');
+var JSC     = require('jscheck'),
+    jasmine = require('jasmine');  // is ... this legit?
 
-var slice = [].slice,
+var slice   = [].slice,
     forAll;
 
 
@@ -77,8 +78,5 @@ forAll = function(signature, name, predicate) {
 
 
 module.exports = {
-
-  make_for_all : MakeForAll,
-  for_all      : forAll
-
+  for_all : forAll
 };
