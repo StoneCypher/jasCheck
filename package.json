@@ -1,0 +1,30 @@
+{
+  "name": "jascheck",
+  "version": "0.1.0",
+  "description": "A re-bake of jazmit/jasmine-jscheck to make appropriate for the npm community",
+  "main": "jasCheck.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/StoneCypher/jasCheck.git"
+  },
+  "keywords": [
+    "jasmine",
+    "jscheck",
+    "stochastic",
+    "property",
+    "fuzz",
+    "test",
+    "testing",
+    "generator",
+    "reduction"
+  ],
+  "author": "Originally James Smith; lately John Haugeland",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/StoneCypher/jasCheck/issues"
+  },
+  "homepage": "https://github.com/StoneCypher/jasCheck"
+}
